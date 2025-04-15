@@ -1,26 +1,252 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /*  -- color -- */
+  /* 基本色 */
+  --blue: #153069;
+  --blue2: #132e4d;
+  --yellow: #c6b54f;
+  --white: #ffffff;
+  --black: #222222;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* フォントファミリー設定 */
+  --sans-serif-f: Graphik, sans-serif;
+  --serif-f: Merriweather, serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* フォントサイズ設定 */
+  --fontsize-xs: 0.75rem;
+  --xs-lineheight: 1rem;
+  --xs-letterspacing: 0.03em;
+
+  /* spacing設定 */
+  --spacing: 1px; /* 通常4pxを1pxに変更 */
+
+  --proportional: {
+    font-variant-east-asian: proportional-width;
+  };
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--sans-serif-f);
+}
+
+.view-button {
+  color: var(--white);
+  background-image: url("/images/button_back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100px;
+  width: 480px;
+  font-size: 0.8em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 3);
+  aspect-ratio: 1 / 1;
+  color: var(--white);
+  text-align: center;
+  vertical-align: middle;
+  background-image: url("/images/strength_back_01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.view-block2 {
+  background-image: url("/images/strength_back_02.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.view-block3 {
+  background-image: url("/images/strength_back_03.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.view-block h5 {
+  font-size: 60px;
+  position: relative;
+}
+
+.view-block span {
+  font-size: 15px;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.view-block p {
+  margin-top: 20px;
+  font-size: 23px;
+}
+
+@media screen and (max-width: 1024px) {
+  #machine {
+    padding: 100px 20px;
+  }
+  #machine div.title {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #machine h3 {
+    margin-bottom: 40px;
+  }
+
+  #machine p {
+    margin-bottom: 40px;
+  }
+
+  #machine .view-button2 {
+    color: var(--blue);
+    background-image: url("/images/button_back2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    letter-spacing: 0em;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+    height: 50px;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #machine {
+    background-image: url("/images/machine_back.png");
+    background-size: cover;
+    width: 1230px;
+    height: 600px;
+    margin: 100px auto;
+    color: var(--white);
+    position: relative;
+  }
+
+  #machine div.title {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #machine > div:first-child {
+    position: absolute;
+    width: 500px;
+    top: calc(50% - 20px);
+    left: 80px;
+    transform: translateY(-50%);
+  }
+
+  #machine h3 {
+    margin-bottom: 40px;
+  }
+
+  #machine p {
+    margin-bottom: 60px;
+  }
+
+  #machine .view-button2 {
+    color: var(--blue);
+    background-image: url("/images/button_back2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 480px;
+    letter-spacing: 0.1em;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    background-image: url("/images/top_back_lg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #logo h1 {
+    margin: auto;
+    width: 245px;
+  }
+
+  #catch {
+    padding: 100px 0;
+    align-items: center;
+  }
+  #catch h2 {
+    padding-left: 15px;
+  }
+
+  .box-icon {
+    display: none;
+  }
+
+  nav ul {
+    text-align: center;
+    background-color: var(--blue2);
+  }
+  nav ul li {
+    border-bottom: 1px solid var(--black);
+    padding: 15px 0;
+  }
+
+  section#about div img {
+    margin-top: 40px;
+  }
+
+  .view-button {
+    height: 50px;
+    width: 240px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .view-block {
+    width: 100%;
+    margin: 0;
+  }
+
+  .view-block span {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .view-block p {
+    margin-top: 40px;
+    font-size: 19px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer h3 {
+    width: 245px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer ul {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer ul li {
+    padding: 10px;
+  }
 }

@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  output: "export", // HTML出力モード
+  trailingSlash: true, //url末尾に/をつける
+  images: {
+    unoptimized: true, //画像最適化を無視（SGでは不可）
+  },
+}
 
-export default nextConfig;
+export default nextConfig
