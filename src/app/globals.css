@@ -34,7 +34,7 @@ body {
 
 .view-button {
   color: var(--white);
-  background-image: url("/images/button_back.png");
+  background-image: url("./images/button_back.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -54,20 +54,20 @@ body {
   color: var(--white);
   text-align: center;
   vertical-align: middle;
-  background-image: url("/images/strength_back_01.png");
+  background-image: url("./images/strength_back_01.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .view-block2 {
-  background-image: url("/images/strength_back_02.png");
+  background-image: url("./images/strength_back_02.png");
   background-size: cover;
   background-position: center;
 }
 
 .view-block3 {
-  background-image: url("/images/strength_back_03.png");
+  background-image: url("./images/strength_back_03.png");
   background-size: cover;
   background-position: center;
 }
@@ -109,7 +109,7 @@ body {
 
   #machine .view-button2 {
     color: var(--blue);
-    background-image: url("/images/button_back2.png");
+    background-image: url("./images/button_back2.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -126,7 +126,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   #machine {
-    background-image: url("/images/machine_back.png");
+    background-image: url("./images/machine_back.png");
     background-size: cover;
     width: 1230px;
     height: 600px;
@@ -158,7 +158,7 @@ body {
 
   #machine .view-button2 {
     color: var(--blue);
-    background-image: url("/images/button_back2.png");
+    background-image: url("./images/button_back2.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100px;
@@ -172,7 +172,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   header {
-    background-image: url("/images/top_back_lg.png");
+    background-image: url("./images/top_back_lg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

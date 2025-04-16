@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "./components/Image"
 import Link from "next/link"
 import {
   alumniSans,
@@ -13,7 +13,7 @@ import {
 export default function Home() {
   return (
     <>
-      <header className="lg:h-[700px] lg:bg-cover lg:bg-[url(/images/top_back.png)] lg:bg-no-repeat bg-[#0c1013]">
+      <header className="lg:h-[700px] lg:bg-cover lg:bg-[url(./images/top_back.png)] lg:bg-no-repeat bg-[#0c1013]">
         <div id="logo" className="lg:px-40 py-20">
           <h1>
             <Image
@@ -44,7 +44,7 @@ export default function Home() {
               CREATE THE SHAPE THAT THE CUSTOMER DESIRES
             </p>
             <Image
-              src="/images/icon.png"
+              src="/images/boxicon.png"
               width={29}
               height={40}
               alt="icon"
@@ -72,7 +72,7 @@ export default function Home() {
             >
               <Image
                 src="/images/contact_icon.png"
-                alt="icon"
+                alt="contact"
                 width={24}
                 height={24}
                 className={"w-24 h-24"}
@@ -84,7 +84,7 @@ export default function Home() {
       </nav>
       <section
         id="about"
-        className="lg:flex justify-end lg:h-[600px] bg-cover bg-[url(/images/about_left_back.png)] bg-no-repeat"
+        className="lg:flex justify-end lg:h-[600px] bg-cover bg-[url(./images/about_left_back.png)] bg-no-repeat"
       >
         <div className="mx-20 lg:w-[580px]">
           <div className="flex flex-col-reverse pt-[100px] pb-[40px]">
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="lg:w-[50%] lg:max-w-[800px]">
           <Image
             src="/images/about_img.png"
-            alt="icon"
+            alt="about"
             width={800}
             height={600}
             className="w-[100%] aspect-[4/3]"
@@ -135,7 +135,7 @@ export default function Home() {
                 view more
                 <Image
                   src="/images/arrow_icon.png"
-                  alt="icon"
+                  alt="arrow"
                   width={58}
                   height={58}
                   className="inline-block lg:ml-20 lg:w-[58px] ml-10 w-[32px]"
