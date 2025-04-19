@@ -90,6 +90,11 @@ body {
   font-size: 23px;
 }
 
+a:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
 @media screen and (max-width: 1024px) {
   #machine {
     padding: 100px 20px;
@@ -167,6 +172,100 @@ body {
     font-size: 1.1em;
     font-weight: 600;
     cursor: pointer;
+  }
+
+  /* リンク */
+  a:hover {
+    opacity: 0.7;
+    transition: all 0.5s;
+  }
+
+  .fnavi li a {
+    position: relative;
+    opacity: 1;
+  }
+  .fnavi li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background: var(--white);
+    opacity: 0.7;
+    transition: all 0.3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+  }
+  .fnavi li.current a::after,
+  .fnavi li a:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .tnavi li:not(.contact-button) a {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: block;
+    padding: 10px;
+  }
+  .tnavi li:not(.contact-button) a:hover {
+    color: var(--black);
+    background: var(--white);
+    transition-delay: 0.3s;
+    opacity: 1;
+  }
+  .tnavi li:not(.contact-button) a:before,
+  .tnavi li:not(.contact-button) a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    opacity: 0.7;
+    width: 100%;
+    transition: all 0.3s;
+  }
+  .tnavi li:not(.contact-button) a::before {
+    top: 0;
+    transform: translateX(-100%);
+  }
+  .tnavi li:not(.contact-button) a::after {
+    bottom: 0;
+    transform: translateX(100%);
+  }
+  .tnavi li:not(.contact-button) a:hover::before,
+  .tnavi li:not(.contact-button) a:hover::after {
+    transform: translateX(0);
+  }
+
+  .contact-button a::before {
+    content: "";
+    background-image: url("./images/contact_icon.png");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    margin: 0 5px;
+    opacity: 1;
+  }
+
+  .contact-button a:hover::before {
+    content: "";
+    background-image: url("./images/contact_icon_black.png");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    margin: 0 5px;
+    opacity: 1;
+  }
+
+  .contact-button a:hover {
+    background: rgb(255, 255, 255, 0.8);
+    transition: all 0.5s;
+    color: rgb(0, 0, 0, 1);
   }
 }
 
@@ -248,5 +347,60 @@ body {
   }
   footer ul li {
     padding: 10px;
+  }
+
+  /* ハンバーガーメニュー */
+  .hbg {
+    position: relative;
+    background: "var(--white)";
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+  }
+  .hbg span {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    height: 2px;
+    border-radius: 2px;
+    transition: all 0.3s;
+    background: var(--white);
+    width: 50%;
+  }
+  .hbg span:nth-last-of-type(1) {
+    top: 30px;
+  }
+  .hbg span:nth-last-of-type(2) {
+    top: 38px;
+  }
+  .hbg span:nth-last-of-type(3) {
+    top: 46px;
+  }
+  .hbg.active span:nth-last-of-type(1) {
+    top: 32px;
+    left: 25px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 40%;
+  }
+  .hbg.active span:nth-last-of-type(2) {
+    opacity: 0;
+  }
+  .hbg.active span:nth-last-of-type(3) {
+    top: 32px;
+    left: 25px;
+    transform: translateY(6px) rotate(45deg);
+    width: 40%;
+  }
+  .hbg:hover {
+    background: var(--black);
+    transition: all 0.5s;
+    opacity: 0.7;
+  }
+
+  .tnavi.active {
+    position: absolute;
+    top: 94px;
+    width: 100%;
   }
 }

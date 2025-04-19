@@ -9,20 +9,28 @@ import {
   notoSerifJp,
   zenOldMincho,
 } from "./layout"
+import HunbargerMenu from "./components/HunbargerMenu"
+import { StatusProvider } from "./components/StatusContext"
+import Navi from "./components/Navi"
 
 export default function Home() {
   return (
-    <>
+    <StatusProvider>
       <header className="lg:h-[700px] lg:bg-cover lg:bg-[url(./images/top_back.png)] lg:bg-no-repeat bg-[#0c1013]">
-        <div id="logo" className="lg:px-40 py-20">
-          <h1>
-            <Image
-              src="/images/logo.png"
-              alt="岡田製作所"
-              width={245}
-              height={54}
-            />
-          </h1>
+        <div className="flex justify-between">
+          <div id="logo" className="lg:px-40 px-20 py-20">
+            <h1>
+              <Link href="#">
+                <Image
+                  src="/images/logo.png"
+                  alt="岡田製作所"
+                  width={245}
+                  height={54}
+                />
+              </Link>
+            </h1>
+          </div>
+          <HunbargerMenu />
         </div>
         <div
           id="catch"
@@ -53,35 +61,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <nav className="lg:absolute lg:top-0 lg:right-0 lg:ml-auto">
-        <ul className="lg:flex lg:m-20 lg:space-x-50 text-(--white) ">
-          <li className="cursor-pointer lg:my-25 ">
-            <Link href="#">業務内容</Link>
-          </li>
-          <li className="cursor-pointer lg:my-25">
-            <Link href="#">製作事例</Link>
-          </li>
-          <li className="cursor-pointer lg:my-25">
-            <Link href="#">会社案内</Link>
-          </li>
-          <li className="cursor-pointer">
-            <Link
-              href="#"
-              className="inline-flex justify-center space-x-5 
-                lg:border-1 lg:border-(--white) lg:px-50 lg:py-25 items-center"
-            >
-              <Image
-                src="/images/contact_icon.png"
-                alt="contact"
-                width={24}
-                height={24}
-                className={"w-24 h-24"}
-              ></Image>
-              <p>お問い合わせ</p>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <Navi />
       <section
         id="about"
         className="lg:flex justify-end lg:h-[600px] bg-cover bg-[url(./images/about_left_back.png)] bg-no-repeat"
@@ -129,18 +109,20 @@ export default function Home() {
               お客様の生産工程における効率化を推進し、高精度で妥協を許さない製品をお届けいたします。
             </p>
             <div className="lg:w-[580px]">
-              <button
-                className={`${notoSans.className} font-[600] view-button`}
-              >
-                view more
-                <Image
-                  src="/images/arrow_icon.png"
-                  alt="arrow"
-                  width={58}
-                  height={58}
-                  className="inline-block lg:ml-20 lg:w-[58px] ml-10 w-[32px]"
-                ></Image>
-              </button>
+              <Link href="#">
+                <button
+                  className={`${notoSans.className} font-[600] view-button`}
+                >
+                  view more
+                  <Image
+                    src="/images/arrow_icon.png"
+                    alt="arrow"
+                    width={58}
+                    height={58}
+                    className="inline-block lg:ml-20 lg:w-[58px] ml-10 w-[32px]"
+                  ></Image>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -191,28 +173,32 @@ export default function Home() {
           <p>
             お客様の様々なニーズに応えることのできる設備を取り揃えております。
           </p>
-          <button className={`${notoSans.className} font-[600] view-button2`}>
-            view more
-            <Image
-              src="/images/arrow_icon2.png"
-              alt="icon"
-              width={58}
-              height={58}
-              className="inline-block lg:ml-20 lg:w-[58px] ml-10 w-[32px]"
-            ></Image>
-          </button>
+          <Link href="#">
+            <button className={`${notoSans.className} font-[600] view-button2`}>
+              view more
+              <Image
+                src="/images/arrow_icon2.png"
+                alt="icon"
+                width={58}
+                height={58}
+                className="inline-block lg:ml-20 lg:w-[58px] ml-10 w-[32px]"
+              ></Image>
+            </button>
+          </Link>
         </div>
       </section>
       <footer className="bg-(--blue2) pt-100 text-(--white) text-[15px]">
         <div className="mx-30">
           <div className="lg:flex">
             <h3 className="lg:pr-[40px] py-[10px]">
-              <img
-                src="./images/logo.png"
-                alt="岡田製作所"
-                width={245}
-                height={54}
-              />
+              <Link href="#">
+                <img
+                  src="./images/logo.png"
+                  alt="岡田製作所"
+                  width={245}
+                  height={54}
+                />
+              </Link>
             </h3>
             <div className="lg:border-l lg:px-[40px] py-[10px]">
               <p className="py-[10px]">
@@ -223,7 +209,7 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:flex lg:justify-between">
-            <ul className="lg:flex lg:space-x-50 my-50">
+            <ul className="lg:flex lg:space-x-50 my-50 fnavi">
               <li style={{ cursor: "pointer" }}>
                 <Link href="#">ホーム</Link>
               </li>
@@ -243,28 +229,34 @@ export default function Home() {
             <div className="flex my-50">
               <ul className="flex space-x-30">
                 <li>
-                  <Image
-                    src="/images/X_icon.png"
-                    alt="X"
-                    width={24}
-                    height={24}
-                  />
+                  <Link href="#">
+                    <Image
+                      src="/images/X_icon.png"
+                      alt="X"
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Image
-                    src="/images/facebook_icon.png"
-                    alt="facebook"
-                    width={24}
-                    height={24}
-                  />
+                  <Link href="#">
+                    <Image
+                      src="/images/facebook_icon.png"
+                      alt="facebook"
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Image
-                    src="/images/instagram_icon.png"
-                    alt="instagram"
-                    width={24}
-                    height={24}
-                  />
+                  <Link href="#">
+                    <Image
+                      src="/images/instagram_icon.png"
+                      alt="instagram"
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -274,11 +266,13 @@ export default function Home() {
           id="copyright"
           className="border-t-1 border-(--white) py-30 mx-30 text-right text-[13px]"
         >
-          <button className="pr-30">Policy</button>
+          <button className="pr-30">
+            <Link href="#">Policy</Link>
+          </button>
           <span>&copy; 2025 有限会社岡田製作所</span>
         </div>
       </footer>
-    </>
+    </StatusProvider>
   )
 }
 
