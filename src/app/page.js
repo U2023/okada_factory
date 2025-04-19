@@ -178,7 +178,7 @@ export default function Home() {
               view more
               <Image
                 src="/images/arrow_icon2.png"
-                alt="icon"
+                alt="arrow"
                 width={58}
                 height={58}
                 className="inline-block lg:ml-20 lg:w-[58px] ml-10 w-[32px]"
