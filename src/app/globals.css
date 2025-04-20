@@ -40,7 +40,6 @@ body {
   position: relative;
   height: 100px;
   width: 480px;
-  font-size: 0.8em;
   font-weight: 600;
   cursor: pointer;
 }
@@ -115,58 +114,45 @@ a:hover(:has(button)) {
 
 a button:hover {
   opacity: 0.9;
+  transition: all 0.3s;
   filter: hue-rotate(0deg);
   animation: shake 1s infinite;
 }
 
-@media screen and (max-width: 1024px) {
-  #machine {
-    background-image: url("./images/machine_back.png");
-    background-size: cover;
-    width: 100%;
-    min-height: 400px;
+/* --- Tablet, PC --- */
+@media screen and (min-width: 1024px) {
+  .view-button {
+    height: 75px;
+    width: 360px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8em;
+  }
 
-    margin: 100px auto;
-    color: var(--white);
+  .view-block {
+    width: 100%;
+    margin: 0;
+  }
+
+  .view-block h5 {
+    font-size: 50px;
     position: relative;
   }
 
-  #machine div.title {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  #machine > div:first-child {
+  .view-block h5 span {
     position: absolute;
-    width: 320px;
-    top: calc(50% - 20px);
-    left: 20px;
-    transform: translateY(-50%);
+    top: 63px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
   }
 
-  #machine h3 {
-    margin-bottom: 40px;
+  .view-block p {
+    margin-top: 40px;
+    font-size: 17px;
   }
 
-  #machine p {
-    margin-bottom: 60px;
-  }
-
-  #machine .view-button2 {
-    color: var(--blue);
-    background-image: url("./images/button_back2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50px;
-    width: 240px;
-    letter-spacing: 0em;
-    font-size: 0.8em;
-    font-weight: 600;
-    cursor: pointer;
-  }
-}
-
-@media screen and (min-width: 1024px) {
   #machine {
     background-image: url("./images/machine_back.png");
     background-size: cover;
@@ -210,6 +196,117 @@ a button:hover {
     font-weight: 600;
     cursor: pointer;
   }
+
+  .contact-button a::before {
+    content: "";
+    background-image: url("./images/contact_icon.png");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    margin: 0 5px;
+    opacity: 1;
+  }
+
+  .contact-button a:hover::before {
+    content: "";
+    background-image: url("./images/contact_icon_black.png");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    margin: 0 5px;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header {
+    background-image: url("./images/top_back_lg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #catch {
+    padding: 100px 0 150px 0;
+    width: 530px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .view-button {
+    height: 75px;
+    width: 360px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8em;
+  }
+
+  .view-block {
+    width: 100%;
+    margin: 0;
+  }
+
+  .view-block h5 {
+    font-size: 42px;
+    position: relative;
+  }
+
+  .view-block h5 span {
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+  }
+
+  .view-block p {
+    margin-top: 30px;
+    font-size: 15px;
+  }
+
+  #machine {
+    background-image: url("./images/machine_back.png");
+    background-size: cover;
+    width: 100%;
+    min-height: 400px;
+    margin: 100px auto;
+    color: var(--white);
+    position: relative;
+  }
+  #machine div.title {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #machine > div:first-child {
+    position: absolute;
+    width: 320px;
+    top: calc(50% - 20px);
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  #machine h3 {
+    margin-bottom: 40px;
+  }
+  #machine p {
+    margin-bottom: 60px;
+  }
+  #machine .view-button2 {
+    color: var(--blue);
+    background-image: url("./images/button_back2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 240px;
+    letter-spacing: 0em;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+/* --- tablet, PC --- */
+@media screen and (min-width: 768px) {
   /* リンク */
   .fnavi li a {
     position: relative;
@@ -271,28 +368,6 @@ a button:hover {
     transform: translateX(0);
   }
 
-  .contact-button a::before {
-    content: "";
-    background-image: url("./images/contact_icon.png");
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-size: cover;
-    margin: 0 5px;
-    opacity: 1;
-  }
-
-  .contact-button a:hover::before {
-    content: "";
-    background-image: url("./images/contact_icon_black.png");
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-size: cover;
-    margin: 0 5px;
-    opacity: 1;
-  }
-
   .contact-button a:hover {
     background: rgb(255, 255, 255, 0.8);
     transition: all 0.5s;
@@ -300,7 +375,12 @@ a button:hover {
   }
 }
 
-@media screen and (max-width: 1024px) {
+.about-img {
+  z-index: -1;
+}
+
+/* -- smart phone-- */
+@media screen and (max-width: 768px) {
   header {
     background-image: url("./images/top_back_lg.png");
     background-repeat: no-repeat;
@@ -314,15 +394,14 @@ a button:hover {
   }
 
   #catch {
+    width: 300px;
     padding: 100px 0 150px 0;
-    align-items: center;
-  }
-  #catch h2 {
-    padding-left: 15px;
+    align-items: left;
   }
 
   .box-icon {
-    display: none;
+    width: 15px;
+    height: 15px;
   }
 
   nav ul {
@@ -332,10 +411,6 @@ a button:hover {
   nav ul li {
     border-bottom: 1px solid var(--black);
     padding: 15px 0;
-  }
-
-  section#about div img {
-    margin-top: 40px;
   }
 
   .view-button {
@@ -440,8 +515,48 @@ a button:hover {
     opacity: 0.7;
     color: var(--white);
   }
+
+  #machine {
+    background-image: url("./images/machine_back.png");
+    background-size: cover;
+    width: 100%;
+    min-height: 400px;
+    margin: 100px auto;
+    color: var(--white);
+    position: relative;
+  }
+  #machine div.title {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #machine > div:first-child {
+    position: absolute;
+    width: 320px;
+    top: calc(50% - 20px);
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  #machine h3 {
+    margin-bottom: 40px;
+  }
+  #machine p {
+    margin-bottom: 60px;
+  }
+  #machine .view-button2 {
+    color: var(--blue);
+    background-image: url("./images/button_back2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 240px;
+    letter-spacing: 0em;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+  }
 }
 
+/* --- PC --- */
 @media screen and (min-width: 1280px) {
   #machine {
     background-image: url("./images/machine_back.png");

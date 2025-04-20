@@ -16,7 +16,10 @@ import Navi from "./components/Navi"
 export default function Home() {
   return (
     <StatusProvider>
-      <header className="lg:h-[700px] lg:bg-cover lg:bg-[url(./images/top_back.png)] lg:bg-no-repeat bg-[#0c1013]">
+      <header
+        className="lg:h-[700px] lg:bg-cover lg:bg-[url(./images/top_back.png)] 
+                    lg:bg-no-repeat bg-[#0c1013]"
+      >
         <div className="flex justify-between">
           <div id="logo" className="lg:px-40 px-20 py-20">
             <h1>
@@ -37,7 +40,8 @@ export default function Home() {
           className="flex flex-col-reverse justify-center lg:py-180 lg:px-200"
         >
           <h2
-            className={`${zenOldMincho.className} lg:text-[76px] text-[32px] text-(--white) tracking-[0.1em] whitespace-nowrap`}
+            className={`${zenOldMincho.className} lg:text-[76px] md:text-[49px] text-[28px]
+                     text-(--white) tracking-[0.1em] whitespace-nowrap`}
           >
             お客様の
             <span className="text-(--yellow)">
@@ -46,15 +50,16 @@ export default function Home() {
             形に。
           </h2>
           <div
-            className={`${alumniSans.className} lg:text-[25px] text-(--white) tracking-[0.14em] lg:flex lg:items-end lg:whitespace-nowrap`}
+            className={`${alumniSans.className} lg:text-[25px] md:text-[16px] text-[10px]
+              text-(--white) tracking-[0.14em] flex items-end whitespace-nowrap`}
           >
-            <p className="pl-7 pr-10 tracking-[0.15em]">
+            <p className="pl-7 md:pr-12 pr-7 tracking-[0.15em]">
               CREATE THE SHAPE THAT THE CUSTOMER DESIRES
             </p>
             <Image
               src="/images/boxicon.png"
-              width={29}
-              height={40}
+              width={25}
+              height={25}
               alt="icon"
               className="mb-5 box-icon"
             />
@@ -64,51 +69,59 @@ export default function Home() {
       <Navi />
       <section
         id="about"
-        className="lg:flex justify-end lg:h-[600px] bg-cover bg-[url(./images/about_left_back.png)] bg-no-repeat"
+        className="relative md:flex justify-end md:h-[600px] 
+                    bg-cover bg-[url(./images/about_left_back.png)] bg-no-repeat"
       >
-        <div className="mx-20 lg:w-[580px]">
-          <div className="flex flex-col-reverse pt-[100px] pb-[40px]">
-            <h3 className={`${mplus.className} text-[17px] text-(--blue)`}>
-              岡田製作所について
-            </h3>
-            <h4
-              className={`${lexendDeca.className} font-[600] text-[54px] text-(--blue) `}
-            >
-              ABOUT US
-            </h4>
+        <div className="absolute top-0 left-0 right-0 ml-auto mr-auto md:w-[1190px] z-10">
+          <div className="mx-20 w-100% md:w-[480px] xl:w-[580px]">
+            <div className="flex flex-col-reverse pt-[50px] sm:pt-[100px] pb-[30px] md:pb-[40px]">
+              <h3
+                className={`${mplus.className} text-[10px] md:text-[17px] text-(--blue)`}
+              >
+                岡田製作所について
+              </h3>
+              <h4
+                className={`${lexendDeca.className} font-[600] text-[38px] md:text-[54px] text-(--blue)`}
+              >
+                ABOUT US
+              </h4>
+            </div>
+            <p>
+              岡田製作所は、建築金物・産業機械・工作機械・精密機械・半導体装置部品を、
+              単に部品加工を行うのではなくユーザーがそのまま生産ラインにのせられる熱処理、研磨、表面処理までトータルに対応しております。
+            </p>
           </div>
-          <p>
-            岡田製作所は、建築金物・産業機械・工作機械・精密機械・半導体装置部品を、
-            単に部品加工を行うのではなくユーザーがそのまま生産ラインにのせられる熱処理、研磨、表面処理までトータルに対応しております。
-          </p>
         </div>
-        <div className="lg:w-[50%] lg:max-w-[800px]">
+        <div className="md:w-[100%] md:max-w-[800px] max-h-[600px] relative about-img">
+          <div className="absolute inset-0 bg-white/70 lg:hidden z-0"></div>
           <Image
             src="/images/about_img.png"
             alt="about"
             width={800}
             height={600}
-            className="w-[100%] aspect-[4/3]"
+            className="w-[100%] aspect-[4/3] z-0"
           ></Image>
         </div>
       </section>
       <section id="business">
-        <div className="px-20 ml-auto mr-auto lg:w-[1190px]">
-          <div className="flex flex-col-reverse pt-[100px] pb-[40px]">
-            <h3 className={`${mplus.className} text-[17px] text-(--blue)`}>
+        <div className="px-20 ml-auto mr-auto md:w-[1190px]">
+          <div className="flex flex-col-reverse pt-[100px] pb-[30px] md:pb-[40px] ">
+            <h3
+              className={`${mplus.className} text-[10px] md:text-[17px] text-(--blue)`}
+            >
               業務内容
             </h3>
             <h4
-              className={`${lexendDeca.className} font-[600] text-[54px] text-(--blue)`}
+              className={`${lexendDeca.className} font-[600] text-[38px] md:text-[54px] text-(--blue)`}
             >
               BUSINESS
             </h4>
           </div>
           <div className="lg:flex lg:justify-center mb-50">
-            <p className="lg:mr-80 lg:w-[580px]">
+            <p className="md:mr-80 md:w-[580px]">
               お客様の生産工程における効率化を推進し、高精度で妥協を許さない製品をお届けいたします。
             </p>
-            <div className="lg:w-[580px]">
+            <div className="md:w-[580px]">
               <Link href="#">
                 <button
                   className={`${notoSans.className} font-[600] view-button`}
@@ -119,14 +132,14 @@ export default function Home() {
                     alt="arrow"
                     width={58}
                     height={58}
-                    className="inline-block lg:ml-20 lg:w-[58px] ml-10 w-[32px]"
+                    className="inline-block md:ml-20 md:w-[58px] ml-10 w-[32px]"
                   ></Image>
                 </button>
               </Link>
             </div>
           </div>
         </div>
-        <div className="lg:flex">
+        <div className="md:flex">
           <div className="view-block my-20 ">
             <div>
               <h5 className={`${notoSerif.className}`}>
@@ -165,8 +178,12 @@ export default function Home() {
       <section id="machine">
         <div>
           <div className="title">
-            <h3 className={`${mplus.className} text-[17px]`}>設備紹介</h3>
-            <h4 className={`${lexendDeca.className} font-[600] text-[54px]`}>
+            <h3 className={`${mplus.className} text-[10px] md:text-[17px]`}>
+              設備紹介
+            </h3>
+            <h4
+              className={`${lexendDeca.className} font-[600] text-[38px] md:text-[54px]`}
+            >
               MACHINE
             </h4>
           </div>

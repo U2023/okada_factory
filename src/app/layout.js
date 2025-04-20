@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <body
-        className={`${notoSansJP.className} --proportional h-[100vh] lg:text-[21px]`}
+        className={`${notoSansJP.className} --proportional h-[100vh] lg:text-[21px] md:text-[18px] text-[14px]`}
       >
         {children}
       </body>
