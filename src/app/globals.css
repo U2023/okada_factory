@@ -446,10 +446,9 @@ a button:hover {
 
   nav ul {
     text-align: center;
-    background-color: var(--blue2);
+    background: rgb(0, 0, 0, 0.8);
   }
   nav ul li {
-    border-bottom: 1px solid var(--black);
     padding: 15px 0;
   }
 
@@ -497,12 +496,13 @@ a button:hover {
 
   /* ハンバーガーメニュー */
   .hbg {
-    position: relative;
-    background: "var(--white)";
+    position: fixed;
+    background: rgb(0, 0, 0, 0.5);
     cursor: pointer;
     width: 80px;
     height: 80px;
-    border-radius: 3px;
+    border-radius: 5px;
+    right: 0px;
   }
   .hbg span {
     display: inline-block;
@@ -522,6 +522,9 @@ a button:hover {
   }
   .hbg span:nth-last-of-type(3) {
     top: 46px;
+  }
+  .hbg.active {
+    background: none;
   }
   .hbg.active span:nth-last-of-type(1) {
     top: 32px;

@@ -9,7 +9,10 @@ const HunbargerMenu = (props) => {
     setIsHbgActive((prev) => !prev)
   }
   return (
-    <div className={`hbg ${isHbgActive ? "active" : ""}`} onClick={openHbgMenu}>
+    <div
+      className={`hbg z-100 ${isHbgActive ? "active" : ""}`}
+      onClick={openHbgMenu}
+    >
       <span></span>
       <span></span>
       <span></span>
