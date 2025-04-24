@@ -40,7 +40,7 @@ export default function Home() {
           className="flex flex-col-reverse justify-center lg:py-180 lg:px-200"
         >
           <h2
-            className={`${zenOldMincho.className} lg:text-[76px] md:text-[49px] text-[28px]
+            className={`${zenOldMincho.className} xl:text-[76px] lg:text-[56px] md:text-[49px] text-[28px]
                      text-(--white) tracking-[0.1em] whitespace-nowrap`}
           >
             お客様の
@@ -72,7 +72,7 @@ export default function Home() {
         className="relative md:flex justify-end md:h-[600px] 
                     bg-cover bg-[url(./images/about_left_back.png)] bg-no-repeat"
       >
-        <div className="absolute top-0 left-0 right-0 ml-auto mr-auto md:w-[1190px] z-10">
+        <div className="absolute top-0 left-0 right-0 ml-auto mr-auto z-10">
           <div className="mx-20 w-100% md:w-[480px] xl:w-[580px]">
             <div className="flex flex-col-reverse pt-[50px] sm:pt-[100px] pb-[30px] md:pb-[40px]">
               <h3
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </section>
       <section id="business">
-        <div className="px-20 ml-auto mr-auto md:w-[1190px]">
+        <div className="px-20 ml-auto mr-auto">
           <div className="flex flex-col-reverse pt-[100px] pb-[30px] md:pb-[40px] ">
             <h3
               className={`${mplus.className} text-[10px] md:text-[17px] text-(--blue)`}
