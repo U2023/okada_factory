@@ -140,7 +140,7 @@ export default function Home() {
           </div>
         </div>
         <div className="md:flex">
-          <div className="view-block my-20 ">
+          <Link href="#" className="view-block my-20">
             <div>
               <h5 className={`${notoSerif.className}`}>
                 01
@@ -150,8 +150,8 @@ export default function Home() {
                 確かな技術で高精度な製品をお届け
               </p>
             </div>
-          </div>
-          <div className="view-block view-block2 my-20 ">
+          </Link>
+          <Link href="#" className="view-block view-block2 my-20 ">
             <div>
               <h5 className={`${notoSerif.className}`}>
                 02
@@ -161,8 +161,8 @@ export default function Home() {
                 単品・小ロットへの対応
               </p>
             </div>
-          </div>
-          <div className="view-block view-block3 my-20 ">
+          </Link>
+          <Link href="#" className="view-block view-block3 my-20 ">
             <div>
               <h5 className={`${notoSerif.className}`}>
                 03
@@ -172,7 +172,7 @@ export default function Home() {
                 納期厳守、短納期にも対応可能
               </p>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
       <section id="machine">
