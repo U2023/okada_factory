@@ -7,9 +7,16 @@ import { use, useEffect, useState } from "react"
 const Navi = () => {
   const { isHbgActive } = useStatus()
   const [mdSize, setMdSize] = useState(false)
+  const [isResize, setIsResize] = useState(false)
+
   useEffect(() => {
-    const md = window.innerWidth >= 768 ? true : false
-    setMdSize(md)
+    const handleResize = () => {
+      setMdSize(window.innerWidth >= 768)
+    }
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
   }, [])
   return (
     <nav className="md:absolute md:top-0 md:right-0 md:ml-auto">
